@@ -36,7 +36,7 @@ Initialized empty Git repository in /home/kmc/Documents/Education/03-IT/01-Educa
 
 
 ## 04. Areas Del Repositorio De GIT
-3 Areas:
+### 3 Areas:
 
 * Working Directory (WD): Directorio de trabajo, donde se van agregando o quitando los archivos, durante el desarrollo.
 
@@ -46,7 +46,7 @@ Initialized empty Git repository in /home/kmc/Documents/Education/03-IT/01-Educa
 * Local Repo (LR): Donde voy a tener todas las versiones o "fotos" que vaya sacando.
 
 ## 05. Estado De Los Archivos
-3 Estados:
+### 3 Estados:
 
 * Untracked: Archivos que están en el WD, aunque GIT no los está dando siguimiento y desconoce su contenido.
 
@@ -165,3 +165,35 @@ c036803 (HEAD -> main) Agrego index.html
 ```
 
 * Muestra las versiones almacenadas en el Local Repo.
+
+4. Comando DIFF:
+* Muestra los cambios hechos en los archivos.
+```sh
+git diff
+```
+
+Output:
+```sh
+diff --git a/css/estilos.css b/css/estilos.css
+index e69de29..db7ed19 100644
+--- a/css/estilos.css
++++ b/css/estilos.css
+@@ -0,0 +1,3 @@
++body {
++    background-color: blueviolet;
++}
+\ No newline at end of file
+```
+
+5. Comando RESTORE
+* Vuelve atrás el último cambio.
+```sh
+git restore <nombre_archivo>
+```
+
+Output:
+```sh
+No hay mensaje.
+```
+
+
