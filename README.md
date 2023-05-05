@@ -107,15 +107,28 @@ nothing added to commit but untracked files present (use "git add" to track)
 
  ## 07. Comandos De GIT
  1. Comando ADD:
+ * Agrega un archivo al área de Staging.
+ * Agregar un sólo archivo:
 ```sh
 git add <nombre_del_archivo>
  ```
+
+* Agregar más de un archivo:
+ ```sh
+git add README.md css/estilos.css
+ ```
+
+ * Agregar cambios de un sólo archivo, que ya está en Staging:
+ ```sh
+git add .
+ ```
 Output:
+```sh
 No hay mensaje.
- 
- *  Agrega un archivo al área de Staging.
+```
 
 2. Comando COMMIT:
+* Mueve un archivo del área de Staging al Local Repo.
 ```sh
 git commit -m "Mensaje"
  ```
@@ -127,8 +140,6 @@ Output:
  1 file changed, 15 insertions(+)
  create mode 100644 index.html
 ```
-
-* Mueve un archivo del área de Staging al Local Repo.
 
 3. Comando LOG:
 * Versión extendida:
