@@ -1,7 +1,7 @@
 # Clase 15 - GIT Intro
 
 ## 01. Configuración Inicial
-Comando:
+* Comando:
 ```sh
 git config --global user.name "Kyu Min Chung"
 git config --global user.email "maxcase@outlook.com"
@@ -10,23 +10,23 @@ git config --global user.email "maxcase@outlook.com"
 * user.email: Email con el que se va a guardar cada cambio.
 
 ## 02. Verificar Configuración
-Comando:
+* Comando:
 ```sh
 git config --global --get-regexp user
 ```
-Output:
+* Output:
 ```sh
 user.name  Kyu Min Chung
 user.email maxcase@outlook.com
 ```
 
 ## 03. Crear Un Repositorio (Inicializar un repo)
-Comando:
+* Comando:
 ```sh
 git init
 ```
 
-Output:
+* Output:
 ```sh
 Initialized empty Git repository in /home/kmc/Documents/Education/03-IT/01-Educacion_IT/05-Full_Stack_Bootcamp/Clase_15/Git_Intro/.git/
 ```
@@ -58,11 +58,11 @@ Initialized empty Git repository in /home/kmc/Documents/Education/03-IT/01-Educa
 * Staged: Archivos que están en el área temporal/intermedia.
 
 ## 06. Conocer El Estado Actual De Los Archivos
-Comando:
+* Comando:
 ```sh
 git status
 ```
-Output:
+* Output:
 * Ejemplo 1:
 ```sh
 On branch main
@@ -134,7 +134,7 @@ git commit -m "Mensaje"
  ```
 -m: Mensaje de lo que se está commiteando.
 
-Output:
+* Output:
 ```sh
 [main (root-commit) c036803] Agrego index.html
  1 file changed, 15 insertions(+)
@@ -146,7 +146,7 @@ Output:
 ```sh
 git log
  ```
-Output:
+* Output:
 ```sh
 commit c03680317b1346044bd0cd399f4f4eea8871748f (HEAD -> main)
 Author: Kyu Min Chung <maxcase@outlook.com>
@@ -154,7 +154,29 @@ Date:   Thu May 4 20:31:47 2023 -0300
 
     Agrego index.html
 ```
+```sh
+commit a8e9ae47d97dd996b0a75f9bbbef216ba89efc76 (HEAD -> main)
+Author: Kyu Min Chung <maxcase@outlook.com>
+Date:   Thu May 4 21:38:20 2023 -0300
 
+    Agrego H2 en el HTML, color rojo al H2 en el CSS, y notas en el README.md.
+
+commit 0bc3cdc24faf4fe46f92f454443c1489d5af53c9
+Author: Kyu Min Chung <maxcase@outlook.com>
+Date:   Thu May 4 21:30:50 2023 -0300
+
+    Agrego estilos.css, con un color de fondo para el body.
+
+commit 0d559ece3690e13ef462dd9cf1df30d84c77d806
+Author: Kyu Min Chung <maxcase@outlook.com>
+Date:   Thu May 4 21:17:11 2023 -0300
+
+    Agrego cambios al README.md
+
+commit d20b5f293b723e2563ffc75a1ca04749d385b6f6
+Author: Kyu Min Chung <maxcase@outlook.com>
+:
+```
 * Versión resumida:
 ```sh
 git log --oneline
@@ -163,16 +185,24 @@ Output:
 ```sh
 c036803 (HEAD -> main) Agrego index.html
 ```
+```sh
+a8e9ae4 (HEAD -> main) Agrego H2 en el HTML, color rojo al H2 en el CSS, y notas en el README.md.
+0bc3cdc Agrego estilos.css, con un color de fondo para el body.
+0d559ec Agrego cambios al README.md
+d20b5f2 Agrego README.me y CSS.
+c036803 Agrego index.html
+```
+
 
 * Muestra las versiones almacenadas en el Local Repo.
 
 4. Comando DIFF:
-* Muestra los cambios hechos en los archivos.
+* Muestra los cambios hechos entre el WD y el LP.
 ```sh
 git diff
 ```
 
-Output:
+* Output:
 ```sh
 diff --git a/css/estilos.css b/css/estilos.css
 index e69de29..db7ed19 100644
@@ -210,14 +240,28 @@ index 3c077fe..5acbcef 100644
 ```
 
 5. Comando RESTORE
-* Vuelve atrás el último cambio.
+* Vuelve atrás el último cambio del Working Directory.
 ```sh
 git restore <nombre_archivo>
 ```
 
-Output:
+* Output:
+```sh
+No hay mensaje.
+```
+* Vuelve atrás el último cambio del área de Staging.
+```sh
+git restore --staged <nombre_archivo>
+```
+* Output:
 ```sh
 No hay mensaje.
 ```
 
+6. Comando COMMIT HELP
+* Muestra en el navegador, todas las opciones del "commit".
+* El archivo de ayuda es local.
+```sh
+git commit --help
+```
 
