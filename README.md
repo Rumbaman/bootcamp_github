@@ -105,6 +105,12 @@ Untracked files:
 nothing added to commit but untracked files present (use "git add" to track)
 ```
 
+* Ejemplo 4:
+```sh
+On branch main
+nothing to commit, working tree clean
+```
+
  ## 07. Comandos De GIT
  1. Comando ADD:
  * Agrega un archivo al área de Staging.
