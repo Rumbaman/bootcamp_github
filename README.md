@@ -185,6 +185,30 @@ index e69de29..db7ed19 100644
 \ No newline at end of file
 ```
 
+```sh
+diff --git a/css/estilos.css b/css/estilos.css
+index 466d7ae..1efd8d0 100644
+--- a/css/estilos.css
++++ b/css/estilos.css
+@@ -1,3 +1,7 @@
+ body {
+     background-color: aquamarine;
++}
++
++h2 {
++    color: red;
+ }
+\ No newline at end of file
+diff --git a/index.html b/index.html
+index 3c077fe..5acbcef 100644
+--- a/index.html
++++ b/index.html
+@@ -11,5 +11,7 @@
+     <h1>GIT Intro</h1>
+ 
+:
+```
+
 5. Comando RESTORE
 * Vuelve atrás el último cambio.
 ```sh
