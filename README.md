@@ -264,9 +264,11 @@ git restore --staged <nombre_archivo>
 No hay mensaje.
 ```
 
-6. Comando COMMIT HELP
-* Muestra en el navegador, todas las opciones del "commit".
+6. Comando HELP
+* Muestra en el navegador la ayuda del comando.
 * El archivo de ayuda es local.
+* Formato para la ayuda: git <comando> --help
+
 ```sh
 git commit --help
 ```
@@ -277,5 +279,28 @@ git commit --help
 * Se escribe el nombre del archivo y/o la ruta del directorio.
 * Ej: logs/error.log | temp/temp.txt
 
+* Crear el archivo .gitignore desde la consola
+```sh
+touch .gitignore
+```
 
-## 
+## 09. Vincular al repositorio en GitHub
+01. Loguearse a GitHub
+02. En GitHub, crear un repositorio, con el botón "New" o desde "New repository" desde el menú desplegable, que se abre en el botón "+", a la izquierda de ícono del perfil.
+03. Dejar el resto de las opciones como está predeterminado.
+04. Click en "Create Repository".
+05. Para agregar el repositorio remoto al repo local: copiar y pegar en la consola
+```sh
+git remote add origin https://github.com/Rumbaman/bootcamp_github.git
+```
+06. Si no muestra ningún mensaje, es porque todo salió bien.
+07. Para ver si tengo un repositorio remoto:
+```sh
+git remote -v /* -v: verbose */
+```
+08. Subir el local repo al repositorio remoto:
+```sh
+git push -u origin main
+
+/* En caso de que tuviera "master" en vez de "main", cambiar "main" por "master" */
+```
