@@ -1,4 +1,4 @@
-# Clase 15 - GIT Intro
+# Clase 16 - GIT Intro (Continuación)
 
 ## 01. Configuración Inicial
 * Comando:
