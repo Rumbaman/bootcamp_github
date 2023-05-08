@@ -271,3 +271,7 @@ No hay mensaje.
 git commit --help
 ```
 
+## 08. GIT IGNORE
+* Sirve para que GIT ignore directorios y archivos, que no deseo que queden en el repositorio.
+* Se escribe el nombre del archivo y/o la ruta del directorio.
+* Ej: logs/error.log
