@@ -272,6 +272,6 @@ git commit --help
 ```
 
 ## 08. GIT IGNORE
-* Sirve para que GIT ignore directorios y archivos, que no deseo que queden en el repositorio.
+* Sirve para que GIT "ignore" (no le va a dar seguimiento) directorios y archivos, que no deseo que queden en el repositorio.
 * Se escribe el nombre del archivo y/o la ruta del directorio.
 * Ej: logs/error.log
