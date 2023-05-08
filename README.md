@@ -271,7 +271,11 @@ No hay mensaje.
 git commit --help
 ```
 
-## 08. GIT IGNORE
-* Sirve para que GIT "ignore" (no le va a dar seguimiento) directorios y archivos, que no deseo que queden en el repositorio.
+## 08. .gitignore (GIT IGNORE)
+* Sirve para que GIT "ignore" (no le va a dar seguimiento) directorios y archivos, que no deseo que sean parte del repositorio.
+* Normalmente, va en la raíz del proyecto.
 * Se escribe el nombre del archivo y/o la ruta del directorio.
-* Ej: logs/error.log
+* Ej: logs/error.log | temp/temp.txt
+
+
+## 
