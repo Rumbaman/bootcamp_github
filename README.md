@@ -332,6 +332,89 @@ c036803 Agrego index.html
 git push
 ```
 
+### Si hago "commit", sin hacer un "push":
+* El local repo está adelantado en 1 commit, respecto del repo remoto:
+```sh
+git status
+
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+git log --oneline
+
+622121f (HEAD -> main) * Agregué comentarios adicionales del push. * Y pruebo funcionalidad para agregar comentarios en varias líneas.
+ce045d8 (origin/main) Agrego notas sobre Ramas en README.md.
+f4cbea8 Agrego notas sobre vincular el repo remoto al repo local, y commitear al repo remoto.
+fc740da Agrego temp.txt a .gitignore y anotaciones sobre Git Ignore en README.md
+9abf823 Agrego cambios a README.md
+ef92987 Agrego a .gitignore logs/error.log y cambios en README.md
+b1be857 Agrego .gitignore + modificaciones a README.md e index.html
+4769e53 Agregué ejemplo adicional de STATUS.
+d913236 Agregue H3, color al H3 en el CSS, y notas de DIFF y RESTORE en el README.md.
+a8e9ae4 Agrego H2 en el HTML, color rojo al H2 en el CSS, y notas en el README.md.
+0bc3cdc Agrego estilos.css, con un color de fondo para el body.
+0d559ec Agrego cambios al README.md
+d20b5f2 Agrego README.me y CSS.
+c036803 Agrego index.html
+```
+* Para igualar, hay que hacer:
+```sh
+git push
+
+git status
+
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+git log --oneline
+
+622121f (HEAD -> main, origin/main) * Agregué comentarios adicionales del push. * Y pruebo funcionalidad para agregar comentarios en varias líneas.
+ce045d8 Agrego notas sobre Ramas en README.md.
+f4cbea8 Agrego notas sobre vincular el repo remoto al repo local, y commitear al repo remoto.
+fc740da Agrego temp.txt a .gitignore y anotaciones sobre Git Ignore en README.md
+9abf823 Agrego cambios a README.md
+ef92987 Agrego a .gitignore logs/error.log y cambios en README.md
+b1be857 Agrego .gitignore + modificaciones a README.md e index.html
+4769e53 Agregué ejemplo adicional de STATUS.
+d913236 Agregue H3, color al H3 en el CSS, y notas de DIFF y RESTORE en el README.md.
+a8e9ae4 Agrego H2 en el HTML, color rojo al H2 en el CSS, y notas en el README.md.
+0bc3cdc Agrego estilos.css, con un color de fondo para el body.
+0d559ec Agrego cambios al README.md
+d20b5f2 Agrego README.me y CSS.
+c036803 Agrego index.html
+```
 ## 10. Ramas en GitHub
 * Es una copia exacta del último commit.
 * Sirve para realizar cambios tentativos, o crear nuevas funcionalidades, sin afectar lo hecho hasta el momento.
+
+## 11. Crear una rama
+01. Commitear y pushear todos los cambios.
+02. Creo una nueva rama:
+```sh
+git branch <nombre_rama>
+```
+* No muestra ningún mensaje.
+03. Para ver las ramas:
+```sh
+git branch
+
+* main
+  ramas
+```
+
+04. Para cambiar de rama:
+```sh
+git switch ramas
+
+Switched to branch 'ramas'
+
+git branch
+
+  main
+* ramas
+```
