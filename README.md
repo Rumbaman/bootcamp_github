@@ -418,3 +418,43 @@ git branch
   main
 * ramas
 ```
+
+### Cuando hago "commit" en la rama
+```sh
+git status
+
+On branch ramas
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.md
+
+git add .
+
+git commit -m "Comment"
+
+[ramas 5401a5c] Agrego notas de Intro A Ramas en README.md.
+ 1 file changed, 83 insertions(+)
+
+git status
+
+On branch ramas
+nothing to commit, working tree clean
+
+git log --oneline
+5401a5c (HEAD -> ramas) Agrego notas de Intro A Ramas en README.md.
+622121f (origin/main, main) * Agregué comentarios adicionales del push. * Y pruebo funcionalidad para agregar comentarios en varias líneas.
+ce045d8 Agrego notas sobre Ramas en README.md.
+f4cbea8 Agrego notas sobre vincular el repo remoto al repo local, y commitear al repo remoto.
+fc740da Agrego temp.txt a .gitignore y anotaciones sobre Git Ignore en README.md
+9abf823 Agrego cambios a README.md
+ef92987 Agrego a .gitignore logs/error.log y cambios en README.md
+b1be857 Agrego .gitignore + modificaciones a README.md e index.html
+4769e53 Agregué ejemplo adicional de STATUS.
+d913236 Agregue H3, color al H3 en el CSS, y notas de DIFF y RESTORE en el README.md.
+a8e9ae4 Agrego H2 en el HTML, color rojo al H2 en el CSS, y notas en el README.md.
+0bc3cdc Agrego estilos.css, con un color de fondo para el body.
+0d559ec Agrego cambios al README.md
+d20b5f2 Agrego README.me y CSS.
+c036803 Agrego index.html
+```
+
