@@ -299,10 +299,37 @@ git remote add origin https://github.com/Rumbaman/bootcamp_github.git
 git remote -v /* -v: verbose */
 ```
 08. Subir el local repo al repositorio remoto:
+* En caso de que tuviera "master" en vez de "main", cambiar "main" por "master":
 ```sh
 git push -u origin main
 
-/* En caso de que tuviera "master" en vez de "main", cambiar "main" por "master" */
+git status
+
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+git log --oneline
+
+ce045d8 (HEAD -> main, origin/main) Agrego notas sobre Ramas en README.md.
+f4cbea8 Agrego notas sobre vincular el repo remoto al repo local, y commitear al repo remoto.
+fc740da Agrego temp.txt a .gitignore y anotaciones sobre Git Ignore en README.md
+9abf823 Agrego cambios a README.md
+ef92987 Agrego a .gitignore logs/error.log y cambios en README.md
+b1be857 Agrego .gitignore + modificaciones a README.md e index.html
+4769e53 Agregué ejemplo adicional de STATUS.
+d913236 Agregue H3, color al H3 en el CSS, y notas de DIFF y RESTORE en el README.md.
+a8e9ae4 Agrego H2 en el HTML, color rojo al H2 en el CSS, y notas en el README.md.
+0bc3cdc Agrego estilos.css, con un color de fondo para el body.
+0d559ec Agrego cambios al README.md
+d20b5f2 Agrego README.me y CSS.
+c036803 Agrego index.html
+```
+
+* Una vez que ya se hizo el primer push, para los siguientes, sólo es necesario el "push":
+```sh
+git push
 ```
 
 ## 10. Ramas en GitHub
