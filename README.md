@@ -304,3 +304,7 @@ git push -u origin main
 
 /* En caso de que tuviera "master" en vez de "main", cambiar "main" por "master" */
 ```
+
+## 10. Ramas en GitHub
+* Es una copia exacta del último commit.
+* Sirve para realizar cambios tentativos, o crear nuevas funcionalidades, sin afectar lo hecho hasta el momento.
