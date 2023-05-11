@@ -1,4 +1,4 @@
-# Clase 16 - GIT Intro (Continuación)
+# Clase 17 - GIT Intro (Continuación)
 
 ## 01. Configuración Inicial
 * Comando:
@@ -273,6 +273,47 @@ No hay mensaje.
 git commit --help
 ```
 
+
+7. Comando AMMEND
+* Reemplaza el último COMMIT
+```sh
+git log
+
+commit b1ce3327b383cfe1bc6537176277903094a9b474 (HEAD -> main)
+Author: Kyu Min Chung <maxcase@outlook.com>
+Date:   Thu May 11 19:34:23 2023 -0300
+
+    Primer commit
+
+/* Primero hay que agregar todos los cambios al área STAGE  */
+git .add
+
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   index.html
+
+
+/* Reemplaza el último COMMIT */
+git commit --ammend -m "Primer commit corregido"
+
+d -m "Primer commit corregido"
+[main 8dddf18] Primer commit corregido
+ Date: Thu May 11 19:34:23 2023 -0300
+ 2 files changed, 25 insertions(+)
+ create mode 100644 css/estilos.css
+ create mode 100644 index.html
+
+git log
+/* Cambió el hash */
+commit 8dddf181dcdb5ec75892b3b41bc7dcfb5e4858c6 (HEAD -> main)
+Author: Kyu Min Chung <maxcase@outlook.com>
+Date:   Thu May 11 19:34:23 2023 -0300
+
+    Primer commit corregido
+```
+
+
 ## 08. .gitignore (GIT IGNORE)
 * Sirve para que GIT "ignore" (no le va a dar seguimiento) directorios y archivos, que no deseo que sean parte del repositorio.
 * Normalmente, va en la raíz del proyecto.
@@ -419,6 +460,11 @@ git branch
 * ramas
 ```
 
+* Si quiero cambiar a la rama anterior:
+```sh
+git switch -
+```
+
 ### Cuando hago "commit" en la rama
 ```sh
 git status
@@ -458,3 +504,23 @@ d20b5f2 Agrego README.me y CSS.
 c036803 Agrego index.html
 ```
 
+## 12. Fusionar una rama
+* Tengo que estar en la rama a la que quiero traer los cambios de la otra rama.
+
+```sh
+git switch main
+
+git branch
+  footer
+* main
+  navbar
+
+/* Traigo los cambios de "navbar" a "main" */
+git merge navbar
+
+Updating 8dddf18..dd8dfdd
+Fast-forward
+ index.html | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+```
+* Fast-forward: Es lo mejor que puede pasar. Significa que no hay solapamiento de líneas de código.
