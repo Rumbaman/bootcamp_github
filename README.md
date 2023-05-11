@@ -515,6 +515,7 @@ git branch
 * main
   navbar
 
+
 /* Traigo los cambios de "navbar" a "main" */
 git merge navbar
 
@@ -522,5 +523,52 @@ Updating 8dddf18..dd8dfdd
 Fast-forward
  index.html | 10 ++++++++++
  1 file changed, 10 insertions(+)
+
+
+/* Traigo los cambios de "footer" a "main" */
+git merge footer
+Auto-merging index.html
+Merge made by the 'ort' strategy.
+ css/estilos.css | 5 +++++
+ index.html      | 4 ++++
+ 2 files changed, 9 insertions(+)
+
+
+git log --oneline
+
+638501a (HEAD -> main) Merge branch 'footer'
+fde1dfa (footer) Agrego FOOTER
+dd8dfdd (navbar) Agrego HEADER y navbar
+8dddf18 Primer commit corregido
 ```
 * Fast-forward: Es lo mejor que puede pasar. Significa que no hay solapamiento de líneas de código.
+* --abort: En caso de conflicto, se puede suspender el MERGE.
+```sh
+git merge --abort
+```
+
+## 13. Eliminar una rama
+* Se tiene que estar posicionado fuera de la rama que se quiere eliminar.
+```sh
+git branch
+
+  footer
+* main
+  navbar
+
+git branch -d footer
+
+Deleted branch footer (was fde1dfa).
+
+* main
+  navbar
+
+git branch -d navbar
+
+Deleted branch navbar (was dd8dfdd).
+
+git branch
+
+* main
+  navbar
+```
