@@ -147,6 +147,11 @@ git commit -m "Mensaje"
  create mode 100644 index.html
 ```
 
+* Una vez que el/los archivos ya están en el repositorio, puedo usar "-am". Con esto, hago un "add" y un "commit" a la vez.
+```sh
+git commit -am "Subo cambios xxxx."
+```
+
 3. Comando LOG:
 * Versión extendida:
 ```sh
@@ -274,7 +279,7 @@ git commit --help
 ```
 
 
-7. Comando AMMEND
+7. Comando AMEND
 * Reemplaza el último COMMIT
 ```sh
 git log
