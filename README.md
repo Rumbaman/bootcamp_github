@@ -150,6 +150,9 @@ git commit -m "Mensaje"
 * Una vez que el/los archivos ya están en el repositorio, puedo usar "-am". Con esto, hago un "add" y un "commit" a la vez.
 ```sh
 git commit -am "Subo cambios xxxx."
+
+[main 1a179a5] Agrego comentario del '-am' del commit, en el README.md.
+ 1 file changed, 6 insertions(+), 1 deletion(-)
 ```
 
 3. Comando LOG:
