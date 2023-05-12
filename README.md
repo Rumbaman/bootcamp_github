@@ -605,3 +605,14 @@ Receiving objects: 100% (27/27), done.
 remote: Total 27 (delta 8), reused 27 (delta 8), pack-reused 0
 Resolving deltas: 100% (8/8), done.
 ```
+
+## 15. Actualizar la META-DATA sin actualizar los datos de mi repo local
+```sh
+git fetch
+```
+
+## 16. Actualizar los datos de una rama
+* Debo estar parado en la rama que quiero actualizar.
+```sh
+git pull origin <nombre_rama>
+```
