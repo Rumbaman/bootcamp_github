@@ -350,6 +350,7 @@ git remote -v /* -v: verbose */
 08. Subir el local repo al repositorio remoto:
 * En caso de que tuviera "master" en vez de "main", cambiar "main" por "master":
 ```sh
+/* Si se va a pushear una rama, reemplazar el 'main' por el nombre de la rama. */
 git push -u origin main
 
 git status
@@ -435,7 +436,7 @@ a8e9ae4 Agrego H2 en el HTML, color rojo al H2 en el CSS, y notas en el README.m
 0bc3cdc Agrego estilos.css, con un color de fondo para el body.
 0d559ec Agrego cambios al README.md
 d20b5f2 Agrego README.me y CSS.
-c036803 Agrego index.html
+c036803 Agrego index.html 
 ```
 ## 10. Ramas en GitHub
 * Es una copia exacta del último commit.
@@ -454,6 +455,16 @@ git branch
 
 * main
   ramas
+
+/* Me lista todas las ramas: a--> Muestra todas las ramas | v--> Verbose, con detalles. */
+git branch -av
+* main
+  ramas
+  dev
+  pepe
+  lola
+  /remotes/origin/maria
+  /remotes/origin/footer
 ```
 
 04. Para cambiar de rama:
@@ -579,4 +590,18 @@ git branch
 
 * main
   navbar
+```
+
+## 14. CLONE: Descargar un repositorio
+* IMPORTANTE: El directorio debe estar vacío.
+```sh
+git clone "<URL_Repositorio>" .
+
+Cloning into '.'...
+remote: Enumerating objects: 27, done.
+remote: Counting objects: 100% (27/27), done.
+remote: Compressing objects: 100% (15/15), done.
+Receiving objects: 100% (27/27), done.
+remote: Total 27 (delta 8), reused 27 (delta 8), pack-reused 0
+Resolving deltas: 100% (8/8), done.
 ```
